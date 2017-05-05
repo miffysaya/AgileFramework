@@ -119,7 +119,7 @@ namespace AgileFramework
         /// <returns></returns>
         public static bool IsInvokeFailed(Action action)
         {
-            bool isInvokeFailed = false;
+            bool isFailed = false;
 
             try
             {
@@ -127,9 +127,9 @@ namespace AgileFramework
             }
             catch
             {
-                isInvokeFailed = true;
+                isFailed = true;
             }
-            return isInvokeFailed;
+            return isFailed;
         }
     }
 }

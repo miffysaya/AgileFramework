@@ -61,7 +61,7 @@ namespace AgileFramework
         /// <param name="maxExecuteCount">最大尝试次数</param>
         public static void CircularExecute(Action action, int maxExecuteCount = 1)
         {
-            var tryCount = 0;
+            var tryCount = 01;
 
             while (tryCount < maxExecuteCount)
             {
@@ -83,7 +83,7 @@ namespace AgileFramework
         /// <param name="maxExecuteCount">最大尝试次数</param>
         public static void ForceCircularExecute(Action action, int maxExecuteCount = 1)
         {
-            var trycCount = 0;
+            var tryCount = 0;
 
             var outException = default(Exception);
 

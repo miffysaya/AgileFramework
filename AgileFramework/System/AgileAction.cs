@@ -9,14 +9,14 @@ namespace AgileFramework
     public static class AgileAction
     {
         /// <summary>
-        /// 尝试运行指定行为
+        /// 尝试执行指定行为
         /// </summary>
         /// <param name="action">行为</param>
         /// <param name="maxTryCount">最大尝试次数</param>
         /// <param name="tryInterval">尝试间隔（单位毫秒）</param>
-        public static void Try(Action action, int maxTryCount = 1, int tryInterval = 1 * 1000)
+        public static void TryExecute(Action action, int maxTryCount = 1, int tryInterval = 1 * 1000)
         {
-            bool isSuccess = false;
+            bool isSuccessed = false;
 
             var tryCount = 0;
 
@@ -28,7 +28,7 @@ namespace AgileFramework
                 {
                     action();
 
-                    isSuccess = true;
+                    isSuccessed = true;
 
                     break;
                 }
@@ -41,7 +41,7 @@ namespace AgileFramework
                     Thread.Sleep(tryInterval);
                 }
             }
-            if (!isSuccess)
+            if (!isSuccessed)
             {
                 if (outException != null)
                 {
@@ -49,9 +49,87 @@ namespace AgileFramework
                 }
                 else
                 {
-                    throw new Exception("尝试失败！");
+                    throw new Exception("获取错误信息失败！");
                 }
             }
+        }
+
+        /// <summary>
+        /// 循环执行指定行为(失败跳出)
+        /// </summary>
+        /// <param name="action">行为</param>
+        /// <param name="maxExecuteCount">最大尝试次数</param>
+        public static void CircularExecute(Action action, int maxExecuteCount = 1)
+        {
+            var tryCount = 0;
+
+            while (tryCount < maxExecuteCount)
+            {
+                try
+                {
+                    action();
+                }
+                catch (Exception exception)
+                {
+                    throw exception;
+                }
+            }
+        }
+
+        /// <summary>
+        /// 强制循环执行指定行为(失败不跳出)
+        /// </summary>
+        /// <param name="action">行为</param>
+        /// <param name="maxExecuteCount">最大尝试次数</param>
+        public static void ForceCircularExecute(Action action, int maxExecuteCount = 1)
+        {
+            var tryCount = 0;
+
+            var outException = default(Exception);
+
+            var isFailed = false;
+
+            while (tryCount < maxExecuteCount)
+            {
+                try
+                {
+                    action();
+                }
+                catch (Exception exception)
+                {
+                    isFailed = true;
+
+                    outException = exception;
+                }
+            }
+            if (isFailed)
+            {
+                if (outException != null)
+                {
+                    throw outException;
+                }
+                throw new Exception("获取错误信息失败");
+            }
+        }
+
+        /// <summary>
+        /// 判断执行是否失败
+        /// </summary>
+        /// <param name="action">行为</param>
+        /// <returns></returns>
+        public static bool IsInvokeFailed(Action action)
+        {
+            bool isInvokeFailed = false;
+
+            try
+            {
+                action();
+            }
+            catch
+            {
+                isInvokeFailed = true;
+            }
+            return isInvokeFailed;
         }
     }
 }

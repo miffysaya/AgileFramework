@@ -83,7 +83,7 @@ namespace AgileFramework
         /// <param name="maxExecuteCount">最大尝试次数</param>
         public static void ForceCircularExecute(Action action, int maxExecuteCount = 1)
         {
-            var tryCount = 0;
+            var trycCount = 0;
 
             var outException = default(Exception);
 

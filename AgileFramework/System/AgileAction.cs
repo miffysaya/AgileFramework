@@ -4,7 +4,7 @@ using System.Threading;
 namespace AgileFramework
 {
     /// <summary>
-    /// Action类
+    /// Action帮助类
     /// </summary>
     public static class AgileAction
     {

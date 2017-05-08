@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 namespace AgileFramework
 {
     /// <summary>
-    /// 比较
+    /// 比较帮助类
     /// </summary>
     public static class AgileCompare
     {

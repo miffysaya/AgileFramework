@@ -5,7 +5,7 @@ using System.Linq;
 namespace AgileFramework
 {
     /// <summary>
-    /// 转换类
+    /// 转换帮助类
     /// </summary>
     public static class AgileConvert
     {

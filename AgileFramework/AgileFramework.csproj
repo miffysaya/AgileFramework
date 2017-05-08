@@ -37,6 +37,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -69,7 +70,11 @@
     <Compile Include="Algorithms\AgileArray.cs" />
     <Compile Include="Algorithms\AgileConsistentHash.cs" />
     <Compile Include="Algorithms\MurmurHash.cs" />
+    <Compile Include="CodeDom\AgileCompiler.cs" />
+    <Compile Include="Diagnostics\AgileProcess.cs" />
     <Compile Include="File\AgileFile.cs" />
+    <Compile Include="Messaging\AgileMessageQuene.cs" />
+    <Compile Include="Messaging\AgileMessageEntity.cs" />
     <Compile Include="Office\AgileCsv.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\AgileAES.cs" />

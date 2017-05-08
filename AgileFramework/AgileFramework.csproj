@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="System\AgileAction.cs" />
+    <Compile Include="System\AgileCompare.cs" />
+    <Compile Include="System\AgileConvert.cs" />
     <Compile Include="System\AgileGuid.cs" />
     <Compile Include="System\AgileWindowsServices.cs" />
   </ItemGroup>

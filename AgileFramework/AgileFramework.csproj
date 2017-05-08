@@ -71,7 +71,10 @@
     <Compile Include="Algorithms\AgileConsistentHash.cs" />
     <Compile Include="Algorithms\MurmurHash.cs" />
     <Compile Include="CodeDom\AgileCompiler.cs" />
+    <Compile Include="Diagnostics\AgileAppContext.cs" />
     <Compile Include="Diagnostics\AgileProcess.cs" />
+    <Compile Include="Diagnostics\AgileStopwatch.cs" />
+    <Compile Include="Diagnostics\AgileTraceType.cs" />
     <Compile Include="File\AgileFile.cs" />
     <Compile Include="Messaging\AgileMessageQuene.cs" />
     <Compile Include="Messaging\AgileMessageEntity.cs" />

@@ -4,6 +4,9 @@ using System.Linq;
 
 namespace AgileFramework
 {
+    /// <summary>
+    /// 金融帮助类
+    /// </summary>
     public static class AgileFinance
     {
         /// <summary>

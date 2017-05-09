@@ -75,9 +75,15 @@
     <Compile Include="Diagnostics\AgileProcess.cs" />
     <Compile Include="Diagnostics\AgileStopwatch.cs" />
     <Compile Include="Diagnostics\AgileTraceType.cs" />
-    <Compile Include="File\AgileFile.cs" />
+    <Compile Include="IO\AgileFile.cs" />
+    <Compile Include="IO\AgileFileSystemWatcher.cs" />
+    <Compile Include="IO\AgileGZip.cs" />
+    <Compile Include="IO\AgileLog.cs" />
     <Compile Include="Messaging\AgileMessageQuene.cs" />
     <Compile Include="Messaging\AgileMessageEntity.cs" />
+    <Compile Include="Net\AgileHttpCache.cs" />
+    <Compile Include="Net\AgileMemoryCache.cs" />
+    <Compile Include="Net\AgileSocket.cs" />
     <Compile Include="Office\AgileCsv.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\AgileAES.cs" />

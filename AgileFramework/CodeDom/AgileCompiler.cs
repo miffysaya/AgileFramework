@@ -28,7 +28,7 @@ namespace AgileFramework.CodeDom
                 compilerParameters.GenerateInMemory = true;
                 compilerParameters.IncludeDebugInformation = false;
                 compilerParameters.TreatWarningsAsErrors = false;
-                compilerParameters.OutputAssembly = string.Format("{0}.dll", SlGuid.NewGuid());
+                compilerParameters.OutputAssembly = string.Format("{0}.dll", AgileGuid.LowerNewGuid());
                 var compilerResults = csharpCodeProvider.CompileAssemblyFromSource(compilerParameters, classCode);
                 return compilerResults.CompiledAssembly;
             }
@@ -59,7 +59,7 @@ namespace AgileFramework.CodeDom
                 compilerParameters.TreatWarningsAsErrors = false;
                 if (string.IsNullOrWhiteSpace(outputAssembly))
                 {
-                    compilerParameters.OutputAssembly = string.Format("{0}.dll", AgileGuid.NewGuid());
+                    compilerParameters.OutputAssembly = string.Format("{0}.dll", AgileGuid.LowerNewGuid());
                 }
                 else
                 {

@@ -15,7 +15,7 @@ namespace AgileFramework.Algorithms
         private static ulong C2 = 0x4cf5ad432745937fL;
 
         private ulong length;
-        private uint seed; // if want to start with a seed, create a constructor
+        private uint seed = 0; // if want to start with a seed, create a constructor
         ulong h1;
         ulong h2;
 

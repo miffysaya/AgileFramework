@@ -35,10 +35,15 @@
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Messaging" />
     <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -67,10 +72,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\AgileSQLCommand.cs" />
     <Compile Include="Algorithms\AgileArray.cs" />
     <Compile Include="Algorithms\AgileConsistentHash.cs" />
     <Compile Include="Algorithms\MurmurHash.cs" />
     <Compile Include="CodeDom\AgileCompiler.cs" />
+    <Compile Include="Data\AgileDatabase.cs" />
+    <Compile Include="Data\AgileDatabaseType.cs" />
     <Compile Include="Diagnostics\AgileAppContext.cs" />
     <Compile Include="Diagnostics\AgileProcess.cs" />
     <Compile Include="Diagnostics\AgileStopwatch.cs" />
@@ -114,6 +122,7 @@
     <Compile Include="Web\Mvc\AgileXmlResult.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

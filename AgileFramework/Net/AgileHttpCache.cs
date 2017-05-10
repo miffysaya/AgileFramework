@@ -5,6 +5,9 @@ using System.Web.Caching;
 
 namespace AgileFramework.Net
 {
+    /// <summary>
+    /// 基于.NET基础类的缓存池
+    /// </summary>
     public class AgileHttpCache
     {
         /// <summary>

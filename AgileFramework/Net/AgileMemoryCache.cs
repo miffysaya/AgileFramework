@@ -5,6 +5,11 @@ using System.Threading;
 
 namespace AgileFramework.Net
 {
+    /// <summary>
+    /// 基于字典的内存池，已加锁
+    /// </summary>
+    /// <typeparam name="TKey"></typeparam>
+    /// <typeparam name="TValue"></typeparam>
     public class AgileMemoryCache<TKey, TValue>
     {
         /// <summary>

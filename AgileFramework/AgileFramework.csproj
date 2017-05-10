@@ -79,6 +79,7 @@
     <Compile Include="CodeDom\AgileCompiler.cs" />
     <Compile Include="Data\AgileDatabase.cs" />
     <Compile Include="Data\AgileDatabaseType.cs" />
+    <Compile Include="Data\AgileSQLServer.cs" />
     <Compile Include="Diagnostics\AgileAppContext.cs" />
     <Compile Include="Diagnostics\AgileProcess.cs" />
     <Compile Include="Diagnostics\AgileStopwatch.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="IO\AgileLog.cs" />
     <Compile Include="Messaging\AgileMessageQuene.cs" />
     <Compile Include="Messaging\AgileMessageEntity.cs" />
+    <Compile Include="Net\AgileConcurrentMemoryCache.cs" />
     <Compile Include="Net\AgileHttpCache.cs" />
     <Compile Include="Net\AgileMemoryCache.cs" />
     <Compile Include="Net\AgileSocket.cs" />
@@ -113,6 +115,7 @@
     <Compile Include="System\AgileWindowsServices.cs" />
     <Compile Include="Text\AgileEncoding.cs" />
     <Compile Include="Text\AgileHex.cs" />
+    <Compile Include="Web\AgileHttpContext.cs" />
     <Compile Include="Web\AgileJson.cs" />
     <Compile Include="Web\AgileRequest.cs" />
     <Compile Include="Web\Mvc\AgileCsvResult.cs" />
